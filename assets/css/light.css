@@ -1,0 +1,32 @@
+/* Independent ROCCA light edition. Geometry, typography and motion are inherited. */
+:root{color-scheme:light;--bg:#f5f4ef;--panel:#e8e7e1;--ink:#171817;--muted:#62655f;--line:#d1d0ca;--accent:#d8c5a5;--accent-ink:#806747}
+body{background:var(--bg);color:var(--ink)}
+header{background:rgba(245,244,239,.97)}
+.brand .brand-symbol img,.brand .brand-wordmark img{filter:none}
+.hero .intro,.intro,.materials-layout p,.final-cta p,.page-heading>p:not(.section-label),.journal-intro,.audience article p,.heading-row p{color:#555950}
+.muted{color:#676b62}
+.section-label,.hero-marker,.hero-helper,.geo,.hero-bottom,.visual-note,.roles,.chapter-summary,.phase-label,.real-card p,.form-note,#form-status,#file-status,.journal-caption>span:last-child,.journal-film figcaption{color:var(--muted)}
+.section-label:before{border-color:var(--accent-ink)}
+.case-number,.technology-item .case-number,.process-steps li:before,.geometry li:not(:last-child):after,.steps span,.capabilities span,.principles span,.pillars,.engineering-chain,.project-directions a{color:var(--accent-ink)}
+.geometry,.engineering-chain{border-color:var(--line)}
+.engineering,.quiet-finale,.final-cta,.page-cta{background:#ecebe6}
+.engineering-note{background:none}
+.media,.real-photo,.portfolio-page .real-photo,.production-photo,.production-card,.project-directions article{background:var(--panel)}
+.button.solid,.solid{background:var(--accent);color:var(--ink)}
+.button.solid:hover,.solid:hover{background:#cbb795}
+.text-link:hover,nav a:hover,nav [aria-current=page],.solution-list a:hover{color:var(--accent-ink)}
+.text-link:hover,.nav-cta,.tabs [aria-selected=true]{border-color:var(--accent-ink)}
+.tabs [aria-selected=true]{color:var(--ink);background:none}
+.mobile-cta{background:rgba(245,244,239,.97)}
+#project-form input:not([type=file]),#project-form textarea{color:var(--ink);caret-color:var(--ink)}
+input::placeholder,textarea::placeholder{color:#6f716c;opacity:1}
+input::file-selector-button{background:var(--panel);color:var(--ink);border-color:var(--line)}
+a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visible,textarea:focus-visible{outline-color:var(--accent-ink)}
+::selection{background:#d8c5a5;color:#171817}
+.journal-player{background:var(--panel);outline:1px solid var(--line)}
+/* Keep the video overlay legible over the unchanged photographic poster. */
+.journal-play{color:#f5f4ef}
+.journal-play svg{border-color:#f5f4efa0;background:#17181770}
+.journal-play:hover svg{background:#171817a0}
+@media(max-width:1150px){nav{background:var(--bg)}}
+@media(max-width:700px){.hero-copy{background:none}}
