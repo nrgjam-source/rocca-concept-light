@@ -1,7 +1,7 @@
 # ROCCA
 
-Static homepage for the existing `rocca-concept-standalone` Vercel project.
-Production: https://rocca-concept-standalone.vercel.app/
+Static homepage for the independent `rocca-concept-light` Vercel project.
+Production: https://rocca-concept-light.vercel.app/
 
 ## Editing
 
@@ -33,3 +33,12 @@ All original images and responsive variants remain in assets for future pages. B
 See `content/README.md` for verified portfolio/production content slots, journal preservation, contacts and form integration. The frontend creates a mailto draft only. It does not send requests or upload files; attachments must be added manually.
 
 Future material entries should use independent `material`, `application`, and `originCountry` fields without making country the primary navigation.
+
+
+## Light comparison version
+
+Copied from `nrgjam-source/rocca-concept` at `d748c7b7e217ff432462c838a93b8a069a841fc2`. The source dark repository and deployment are independent and must not be changed from this project.
+
+Color overrides are isolated in `assets/css/light.css`. Page structure, content, images, fonts and animation scripts remain unchanged. Dark SVG outlines have light-theme graphite variants.
+
+Search indexing is disabled using page robots metadata, `robots.txt`, and the `X-Robots-Tag` header in `vercel.json`.
