@@ -1,44 +1,19 @@
-# ROCCA
+# ROCCA PRIVATE
 
-Static homepage for the independent `rocca-concept-light` Vercel project.
-Production: https://rocca-concept-light.vercel.app/
+Independent light website for private clients. Production: https://rocca-concept-light.vercel.app/
 
-## Editing
+Dark ROCCA (nrgjam-source/rocca-concept / rocca-concept-standalone) remains a separate B2B and architectural site. Never synchronize Private homepage content back to Dark.
 
-- `index.html`: page content and semantic sections; no bundled/base64 images.
-- `assets/css/main.css`: layout, responsive breakpoints, reduced-motion fallback.
-- `assets/js/main.js`: mobile navigation, accessible process tabs, viewport-driven motion.
-- `assets/main1–main7.webp`: optimized source images; `-800` variants for smaller screens.
-- Serve locally with `python3 -m http.server 3000`. No build or dependencies required.
+Static HTML/CSS/JS with existing Inter fonts, image assets and IntersectionObserver reveals. Existing /projects, /production and /journal remain. All routes stay noindex.
 
-## Homepage flow
+## Content and configuration
 
-Hero → compact full-cycle introduction → solutions → portfolio requests → materials → process tabs with B2B callout → production capabilities → compact engineering → final CTA and calculation form.
+- assets/js/private-config.js: campaign text, Moscow expiry date, verified reviews and future product landing presets.
+- assets/css/private.css: Private layout and responsive product presentation.
+- assets/js/private.js: campaign rendering, standard dataLayer hooks and quotation form.
+- api/form-status.js, api/lead.js: optional configured email delivery.
+- content/private-integration.md: configuration and form behavior.
 
-The main action is “Рассчитать проект”; a mobile bottom action appears after the hero and hides at the contact form.
+Form sending is disabled until RESEND_API_KEY and ROCCA_FORM_FROM are configured in this Vercel project with a verified sender. The current fallback prepares a mailto draft and does not claim to send it or upload files.
 
-## Images
-
-| Image | Current placement |
-| --- | --- |
-| main5 | Hero, eager loading and high fetch priority |
-| main4 | Solution directions overview, conceptual illustration |
-| main3 | Materials in architectural context |
-| main8 | Engineering, conceptual illustration |
-
-All original images and responsive variants remain in assets for future pages. Below-hero imagery is lazy loaded. No conceptual illustration is presented as a completed ROCCA case or a real manufacturing photograph.
-
-## Pending integrations
-
-See `content/README.md` for verified portfolio/production content slots, journal preservation, contacts and form integration. The frontend creates a mailto draft only. It does not send requests or upload files; attachments must be added manually.
-
-Future material entries should use independent `material`, `application`, and `originCountry` fields without making country the primary navigation.
-
-
-## Light comparison version
-
-Copied from `nrgjam-source/rocca-concept` at `d748c7b7e217ff432462c838a93b8a069a841fc2`. The source dark repository and deployment are independent and must not be changed from this project.
-
-Color overrides are isolated in `assets/css/light.css`. Page structure, content, images, fonts and animation scripts remain unchanged. Dark SVG outlines have light-theme graphite variants.
-
-Search indexing is disabled using page robots metadata, `robots.txt`, and the `X-Robots-Tag` header in `vercel.json`.
+No fabricated reviews, prices or percentage discounts. Hero and conceptual product panels are marked as visualizations; real cases use the existing project archive.
