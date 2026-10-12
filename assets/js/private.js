@@ -1,0 +1,29 @@
+'use strict';
+(()=>{
+ const cfg=window.ROCCA_PRIVATE||{};const promo=cfg.promotion;
+ const active=!!(promo?.active&&Number.isFinite(Date.parse(promo.endsAt))&&Date.now()<=Date.parse(promo.endsAt));
+ const date=active?new Intl.DateTimeFormat('ru-RU',{day:'numeric',month:'long',timeZone:'Europe/Moscow'}).format(new Date(promo.endsAt)):'';
+ document.querySelectorAll('[data-promotion]').forEach(el=>el.hidden=!active);
+ const fill=(sel,text)=>document.querySelectorAll(sel).forEach(el=>el.textContent=text);
+ if(active){fill('[data-promo-date]','ДО '+date.toUpperCase());fill('[data-promo-hero]',promo.headline);fill('[data-promo-section]','СПЕЦИАЛЬНЫЕ УСЛОВИЯ ДО '+date.toUpperCase());fill('[data-promo-description]',promo.description);fill('[data-promo-terms]',promo.terms);fill('[data-promo-bonus]',promo.description);const s=document.querySelector('#offer h2');if(s)s.textContent=promo.headline;const a=document.querySelector('#offer .button');if(a)a.childNodes[0].textContent=promo.cta+' ';}
+ const reviews=(cfg.reviews||[]).filter(r=>r.verified===true&&r.text&&r.author&&r.source);
+ if(reviews.length){const list=document.querySelector('#verified-reviews');reviews.forEach(r=>{const b=document.createElement('blockquote'),p=document.createElement('p'),c=document.createElement('cite');p.textContent=r.text;c.textContent=r.author;b.append(p,c);list?.append(b)});const section=document.querySelector('#reviews');if(section)section.hidden=false;}
+ // Standard dataLayer hooks only; no personal information, trackers or cookies added.
+ const event=(name,extra={})=>{window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:name,...extra});};
+ let formSeen=false;const opened=()=>{if(!formSeen){event('form_open');formSeen=true;}};
+ document.addEventListener('click',e=>{const a=e.target.closest('[data-event]');if(a)event(a.dataset.event);const link=e.target.closest('[href$="#contact"]');if(link)opened();const p=e.target.closest('[data-product]');if(p?.dataset.product&&form){form.elements.product.value=p.dataset.product;}});
+ const form=document.querySelector('#private-form');if(!form)return;form.addEventListener('focusin',opened);
+ const status=document.querySelector('#private-status'),draft=document.querySelector('#private-draft'),fileInput=form.elements.files,mode=document.querySelector('#form-mode'),fileNote=document.querySelector('#file-note');
+ const uuid=()=>{if(typeof crypto.randomUUID==='function')return crypto.randomUUID();const b=crypto.getRandomValues(new Uint8Array(16));b[6]=(b[6]&15)|64;b[8]=(b[8]&63)|128;const h=[...b].map(x=>x.toString(16).padStart(2,'0')).join('');return [h.slice(0,8),h.slice(8,12),h.slice(12,16),h.slice(16,20),h.slice(20)].join('-');};
+ let online=false,started=Date.now(),requestId=uuid();
+ const category=cfg.landings?.[location.pathname];if(category)form.elements.product.value=category;
+ fetch('/api/form-status',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(d=>{if(d?.enabled){online=true;fileInput.disabled=false;mode.textContent='Отправим вашу задачу и материалы в ROCCA для предварительного расчёта.';fileNote.textContent='PDF, DWG, DXF, JPG, PNG · до 5 файлов, всего до 3 МБ.';}}).catch(()=>{});
+ form.addEventListener('input',()=>{draft.hidden=true;status.textContent='';requestId=uuid();});
+ fileInput.addEventListener('change',()=>{const files=[...fileInput.files];if(files.length>5||files.reduce((n,f)=>n+f.size,0)>3*1024*1024){status.textContent='Выберите до 5 файлов общим размером до 3 МБ.';fileInput.value='';}else status.textContent=files.length?'Выбрано файлов: '+files.length+'. Они будут отправлены вместе с заявкой.':'';});
+ form.addEventListener('submit',async e=>{
+  e.preventDefault();if(!form.reportValidity())return;event('form_submit_attempt');const fields={name:form.elements.name.value.trim(),contact:form.elements.contact.value.trim(),product:form.elements.product.value,task:form.elements.task.value.trim()};
+  if(!online){const body=['Имя: '+fields.name,'Контакт: '+fields.contact,'Изделие: '+fields.product,'Задача: '+fields.task].join('\n\n');draft.href='mailto:hello@roccastone.ru?subject='+encodeURIComponent('ROCCA PRIVATE — расчёт изделия')+'&body='+encodeURIComponent(body);draft.hidden=false;status.textContent='Письмо подготовлено, но ещё не отправлено. Откройте его, приложите фото или проект и отправьте.';draft.focus();event('email_draft_prepared');return;}
+  const button=form.querySelector('button[type=submit]');button.disabled=true;status.textContent='Отправляем материалы…';
+  try{const attachments=await Promise.all([...fileInput.files].map(file=>new Promise((resolve,reject)=>{const r=new FileReader();r.onload=()=>resolve({filename:file.name,content:String(r.result).split(',')[1]});r.onerror=reject;r.readAsDataURL(file)})));const response=await fetch('/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({...fields,attachments,website:form.elements.website.value,elapsed:Date.now()-started,requestId})});const result=await response.json();if(!response.ok||!result.ok)throw Error(result.message||'Не удалось отправить заявку. Позвоните нам или напишите на hello@roccastone.ru.');status.textContent='Спасибо. Мы получили материалы и свяжемся с вами после предварительного просмотра проекта.';event('lead_success');form.reset();started=Date.now();requestId=uuid();}catch(err){status.textContent=err.message||'Не удалось отправить заявку. Попробуйте ещё раз или свяжитесь с нами.';event('form_error');}finally{button.disabled=false;}
+ });
+})();
