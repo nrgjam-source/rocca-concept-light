@@ -29,3 +29,14 @@
 .keep-words{white-space:nowrap}
 
 .hero-offer .offer-condition{font-size:11px;color:var(--muted);line-height:1.5;margin-top:8px}
+
+/* Supplied hero2: a larger island-focused frame; existing hero entry and camera timing stay unchanged. */
+@media(min-width:701px){
+ .private-home .hero{max-width:1720px;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);column-gap:clamp(32px,3vw,54px)}
+}
+.private-home .hero-photo{aspect-ratio:3/2}
+.private-home .hero-photo img{position:static;width:100%;height:100%;max-width:none;object-fit:cover;object-position:75% 55%;transform-origin:center}
+@media(max-width:700px){
+ .private-home .hero-photo{width:calc(100% + 28px);margin-inline:-14px;aspect-ratio:4/3}
+ .private-home .hero-photo img{object-position:70% 65%}
+}
