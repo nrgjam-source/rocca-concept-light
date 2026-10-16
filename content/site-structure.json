@@ -1,0 +1,45 @@
+{
+  "active": [
+    "/",
+    "/projects",
+    "/production",
+    "/materials",
+    "/professionals",
+    "/journal",
+    "/contacts"
+  ],
+  "planned": {
+    "/stoleshnicy": {
+      "product": "Столешница"
+    },
+    "/lestnicy": {
+      "product": "Лестница"
+    },
+    "/kaminy": {
+      "product": "Камин"
+    },
+    "/podokonniki": {
+      "product": "Подоконники"
+    },
+    "/vannye": {
+      "product": "Ванная"
+    }
+  },
+  "productPageSections": [
+    "hero",
+    "examples",
+    "materials",
+    "process",
+    "offer",
+    "contact"
+  ],
+  "shared": [
+    "header",
+    "footer",
+    "Inter fonts",
+    "reveal system",
+    "quotation form",
+    "campaign config"
+  ],
+  "indexing": "noindex, nofollow"
+}
