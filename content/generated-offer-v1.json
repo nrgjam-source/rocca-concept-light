@@ -1,0 +1,10 @@
+{
+  "mode": "built-in image_gen",
+  "purpose": "Special conditions illustration; not an executed ROCCA project",
+  "prompt": "Use case: photorealistic-natural. Asset type: ROCCA light architectural website Special conditions promotion image. Create a new high-end editorial interior photograph, close architectural view of a beautifully crafted natural stone kitchen worktop with an undermounted stainless steel single-bowl sink and a simple brushed metal mixer tap. The stone countertop is the primary subject: pale warm ivory stone with delicate natural taupe-grey veins, clean 30mm straight edge, precise polished sink opening and beautiful continuous stone backsplash. Restrained contemporary oak cabinets, soft diffuse northern daylight from off-frame tall window, one small ceramic dish and neatly folded linen towel only. Camera three-quarter slightly elevated view from front left, sink and its precise junction with stone entirely visible at center-right, long stone edge crosses lower foreground, enough surrounding surface to appreciate stone pattern. No island, no full kitchen wide shot. Landscape 5:4 composition suited to 1.25 aspect container, keep all critical stone edges and sink safe for narrow mobile crop. Warm ivory and oak with subtle graphite shadows, tactile realistic surface and natural reflections, understated premium architecture photography, no people, no text, no logos, no watermark, no sale graphics. This is an illustrative concept visualization, not documentation of an executed ROCCA project. Ensure tap correctly aligned over sink and physically coherent plumbing/geometry. No artificial extreme gloss, no excessive accessories or gold.",
+  "source": "exec-82423d2c-2b15-4e58-89e5-c9289194e45d.png",
+  "outputs": [
+    "assets/promotions/countertop-sink-v1-480.webp",
+    "assets/promotions/countertop-sink-v1-1100.webp"
+  ]
+}
