@@ -1,0 +1,47 @@
+/* One motion language for ROCCA Light. All content stays visible without JavaScript. */
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+html.lenis.lenis-smooth{scroll-behavior:auto!important}
+.motion-ready [data-motion].motion-pending{opacity:0;transform:translate3d(0,24px,0);transition:opacity 850ms cubic-bezier(.22,1,.36,1),transform 850ms cubic-bezier(.22,1,.36,1);transition-delay:var(--entry-delay,0ms)}
+.motion-ready [data-motion].motion-visible{opacity:1;transform:none}
+.word-clip{display:inline-block;overflow:hidden;vertical-align:top;padding-block:.07em;margin-block:-.07em}
+.word-inner{display:inline-block;transform:translate3d(0,112%,0);opacity:0;transition:transform 750ms cubic-bezier(.22,1,.36,1),opacity 650ms cubic-bezier(.22,1,.36,1);transition-delay:var(--word-delay,0ms)}
+.words-visible .word-inner{transform:none;opacity:1}
+[data-image-reveal]{overflow:hidden;isolation:isolate}
+.motion-image-layer,.motion-parallax-layer{width:100%;height:100%;position:relative}
+.motion-image-layer{opacity:1;transform:none;clip-path:inset(0);transition:clip-path 1150ms cubic-bezier(.22,1,.36,1),transform 1150ms cubic-bezier(.22,1,.36,1),opacity 1000ms cubic-bezier(.22,1,.36,1)}
+.image-pending:not(.image-visible)>.motion-image-layer{opacity:0;clip-path:inset(7% 0 0 0);transform:translate3d(0,22px,0) scale(1.045)}
+.motion-parallax-layer{transform:translate3d(0,var(--parallax-y,0px),0) scale(var(--parallax-scale,1));transform-origin:center}
+.motion-parallax-layer>img{transition:transform 700ms cubic-bezier(.22,1,.36,1)}
+.motion-hero .hero-photo{opacity:0;transform:translate3d(0,8px,0) scale(1.025);transition:opacity 1400ms cubic-bezier(.22,1,.36,1),transform 1400ms cubic-bezier(.22,1,.36,1)}
+.motion-hero.hero-motion-ready .hero-photo{opacity:1;transform:none}
+.motion-hero .hero-detail{opacity:0;transform:translateY(15px);transition:opacity 850ms cubic-bezier(.22,1,.36,1),transform 850ms cubic-bezier(.22,1,.36,1);transition-delay:var(--detail-delay,150ms)}
+.motion-hero.hero-motion-ready .hero-detail{opacity:1;transform:none}
+[data-magnetic]{transform:translate3d(var(--magnet-x,0px),var(--magnet-y,0px),0);transition:transform 450ms cubic-bezier(.22,1,.36,1),background .3s,color .3s}
+.context-cursor{position:fixed;left:0;top:0;z-index:45;width:76px;height:76px;display:grid;place-items:center;border-radius:50%;background:#f5f4efe8;color:#252824;border:1px solid #25282422;pointer-events:none;opacity:0;font:9px/1.4 Inter,sans-serif;letter-spacing:.02em;transition:opacity .2s;transform:translate3d(-200px,-200px,0)}
+.context-cursor.is-active{opacity:1}
+.materials-marquee{position:relative;display:flex;gap:20px;align-items:center;border-bottom:1px solid var(--line);padding:38px 0;background:var(--bg);overflow:hidden}
+.marquee-window{min-width:0;flex:1;overflow:hidden}.marquee-track{display:flex;width:max-content;animation:material-drift 85s linear infinite}.marquee-track>span{flex:none;white-space:nowrap;font-family:'Inter Tight',Inter,sans-serif;font-size:clamp(38px,4.6vw,88px);font-weight:400;letter-spacing:-.012em;line-height:1.2;color:#62685b}
+.materials-marquee:hover .marquee-track,.materials-marquee:focus-within .marquee-track,.materials-marquee.is-paused .marquee-track{animation-play-state:paused}
+.materials-marquee>button{width:40px;height:40px;flex-shrink:0;margin-right:var(--pad);border:1px solid var(--line);border-radius:50%;font-size:12px}
+@keyframes material-drift{to{transform:translate3d(-50%,0,0)}}
+.site-preloader{position:fixed;inset:0;z-index:100;display:grid;place-content:center;gap:35px;background:#f5f4ef;pointer-events:none;transition:opacity 260ms ease;opacity:1}
+.site-preloader .brand{margin:auto;pointer-events:none}.site-preloader-line{width:240px;height:1px;background:#d1d0ca;overflow:hidden}.site-preloader-line:after{content:"";display:block;background:#62685b;height:100%;transform-origin:left;animation:preload-line 650ms cubic-bezier(.22,1,.36,1) both}.site-preloader.is-done{opacity:0}
+@keyframes preload-line{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media(hover:hover) and (pointer:fine){
+ .motion-ready [data-image-reveal]:not(.hero-photo) img{transition:transform 700ms cubic-bezier(.22,1,.36,1)}
+ a:hover>[data-image-reveal] img,a:hover .editorial-media img,.story-figure:hover [data-image-reveal] img,.rail-slide:hover img{transform:scale(1.025)}
+ .product-fireplace a:hover .editorial-media img{transform:none}
+}
+@media(max-width:700px){
+ .motion-ready [data-motion].motion-pending{transform:translate3d(0,16px,0);transition-duration:700ms}.motion-ready [data-motion].motion-visible{transform:none}
+ .word-inner{transition-duration:620ms}.motion-image-layer{transition-duration:900ms}.image-pending:not(.image-visible)>.motion-image-layer{transform:translate3d(0,15px,0) scale(1.025);clip-path:inset(4% 0 0 0)}
+ .motion-hero .hero-photo{transition-duration:1250ms}.context-cursor{display:none}.materials-marquee{padding-block:27px}.marquee-track>span{font-size:36px}.materials-marquee>button{width:35px;height:35px}
+ .site-preloader{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto!important}
+ .motion-ready [data-motion].motion-pending,.motion-ready [data-motion].motion-visible,.word-inner,.hero-detail,.motion-hero .hero-photo,.motion-image-layer,.image-pending:not(.image-visible)>.motion-image-layer{opacity:1!important;transform:none!important;clip-path:none!important;transition:none!important;animation:none!important}
+ .motion-parallax-layer,[data-magnetic],.rail-slide .story-frame{transform:none!important;transition:none!important;opacity:1!important}
+ .marquee-track{animation:none!important;width:auto}.marquee-track>span{white-space:normal;font-size:clamp(22px,3vw,45px)}.marquee-track>span+span{display:none}.marquee-window{padding-inline:var(--pad)}.materials-marquee>button{display:none}
+ .site-preloader,.context-cursor{display:none!important}.hero-camera-ready .hero-photo img{animation:none!important}
+}

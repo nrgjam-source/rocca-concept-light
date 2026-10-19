@@ -1,0 +1,138 @@
+[
+  {
+    "source": "01_Blue_Pearl_Kitchen_A.png",
+    "key": "blue-pearl-kitchen",
+    "title": "Кухонная столешница",
+    "presentation": "Интерьерная визуализация",
+    "width": 1200,
+    "height": 900
+  },
+  {
+    "source": "03_Taj_Mahal_Island_A.png",
+    "key": "taj-mahal-island",
+    "title": "Кухонный остров",
+    "presentation": "Интерьерная визуализация",
+    "width": 1200,
+    "height": 900
+  },
+  {
+    "source": "05_Carrara_Windowsill_A.png",
+    "key": "carrara-windowsill-a",
+    "title": "Каменный подоконник",
+    "presentation": "Интерьерная визуализация",
+    "width": 1200,
+    "height": 900
+  },
+  {
+    "source": "06_Carrara_Windowsill_B.png",
+    "key": "carrara-windowsill-b",
+    "title": "Подоконник · деталь",
+    "presentation": "Интерьерная визуализация",
+    "width": 1200,
+    "height": 900
+  },
+  {
+    "source": "08_Nero_Marquina_Windowsill_B.png",
+    "key": "nero-marquina-windowsill",
+    "title": "Тёмный каменный подоконник",
+    "presentation": "Интерьерная визуализация",
+    "width": 1200,
+    "height": 900
+  },
+  {
+    "source": "14_Honey_Onyx_B.png",
+    "key": "honey-onyx-panel",
+    "title": "Панно с подсветкой",
+    "presentation": "Интерьерная визуализация",
+    "width": 1200,
+    "height": 900
+  },
+  {
+    "source": "16_Green_Onyx_B.png",
+    "key": "green-onyx-panel",
+    "title": "Каменное панно",
+    "presentation": "Интерьерная визуализация",
+    "width": 1200,
+    "height": 900
+  },
+  {
+    "source": "20_Calacatta_Bathroom_B.png",
+    "key": "calacatta-bathroom",
+    "title": "Ванная комната",
+    "presentation": "Интерьерная визуализация",
+    "width": 1200,
+    "height": 900
+  },
+  {
+    "source": "21_Patagonia_Kitchen_A.png",
+    "key": "patagonia-kitchen",
+    "title": "Кухонная столешница",
+    "presentation": "Интерьерная визуализация",
+    "width": 1200,
+    "height": 900
+  },
+  {
+    "source": "23_Mont_Blanc_Island_A.png",
+    "key": "mont-blanc-island",
+    "title": "Кухонный остров",
+    "presentation": "Интерьерная визуализация",
+    "width": 1200,
+    "height": 900
+  },
+  {
+    "source": "26_Travertine_Windowsill_B.png",
+    "key": "travertine-windowsill",
+    "title": "Подоконник в интерьере",
+    "presentation": "Интерьерная визуализация",
+    "width": 1200,
+    "height": 900
+  },
+  {
+    "source": "27_Botticino_Stairs_A.png",
+    "key": "botticino-staircase",
+    "title": "Каменная лестница",
+    "presentation": "Интерьерная визуализация",
+    "width": 1200,
+    "height": 900
+  },
+  {
+    "source": "30_White_Onyx_B.png",
+    "key": "white-onyx-panel",
+    "title": "Световое панно",
+    "presentation": "Интерьерная визуализация",
+    "width": 1200,
+    "height": 900
+  },
+  {
+    "source": "34_Bianco_Lasa_Floor_B.png",
+    "key": "bianco-lasa-floor",
+    "title": "Каменный пол",
+    "presentation": "Интерьерная визуализация",
+    "width": 1200,
+    "height": 900
+  },
+  {
+    "source": "35_Silver_Wave_Floor_A.png",
+    "key": "silver-wave-floor",
+    "title": "Пол в гостиной",
+    "presentation": "Интерьерная визуализация",
+    "width": 1200,
+    "height": 900
+  },
+  {
+    "source": "39_Marble_Mosaic_Hall_A.png",
+    "key": "marble-mosaic-hall",
+    "title": "Мозаичный пол",
+    "presentation": "Интерьерная визуализация",
+    "width": 1200,
+    "height": 900
+  },
+  {
+    "source": "Столешка Blue Pearl 1.png",
+    "key": "blue-pearl-countertop-detail",
+    "title": "Столешница · деталь",
+    "presentation": "Интерьерная визуализация",
+    "width": 1200,
+    "height": 900
+  }
+]
