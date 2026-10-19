@@ -1,0 +1,41 @@
+{
+  "generator": "Built-in image_gen",
+  "classification": "AI-generated interior visualization and illustrative material textures; not actual ROCCA projects, stocked slabs, certified material samples or named commercial varieties.",
+  "assets": [
+    {
+      "key": "countertop",
+      "source": "exec-708a6457-9599-4bb1-b3c6-111e7de07946.png",
+      "prompt": "Use case: photorealistic-natural. Asset: premium ROCCA website product category photograph, a NEW interior visualization, separate from the golden translucent stone island in the website hero. Create one portrait architectural photograph of a restrained contemporary Saint Petersburg apartment kitchen. Main subject: a large elegant kitchen island with a pale ivory natural-stone worktop, fine understated grey veins, a precisely mitered 40mm edge and solid stone waterfall end. Warm oak cabinetry, muted greige wall, soft northern daylight, no flashy gold. Show the whole island including its long work surface and waterfall edge in a balanced three-quarter view; main island occupies 65–75% of image. Architectural perspective, realistic reflections and believable construction, calm high-end editorial interior photography, realistic lived-in but uncluttered. No people, no text, logos, watermarks, borders or collage. Vertical 4:5 framing suitable for a large web card. No resemblance to the dramatic amber/crystalline countertop currently in the hero."
+    },
+    {
+      "key": "marble",
+      "source": "exec-c7ebee46-6fdb-40b3-88c2-59ba2194063c.png",
+      "prompt": "Use case: product-mockup. Asset: single square full-bleed stone texture illustration for a premium architectural materials card. One photorealistic close-up of polished white marble: warm ivory-white calcitic base, elegant sparse soft grey branching veins crossing diagonally, very fine natural mineral variation, physically believable marble. Flat front-on orthographic texture view, soft diffuse studio daylight, no glare hotspot, crisp fine detail. Entire image is one continuous marble surface; no slab edges, fixtures, architecture, objects, text, labels, frames, collage, logos or watermark. Quiet warm neutral palette. Square composition, high-resolution material study. It is an illustrative material reference, not a particular named quarry or commercial slab."
+    },
+    {
+      "key": "granite",
+      "source": "exec-c3185558-52a4-470a-a6a1-63e3647356d9.png",
+      "prompt": "Use case: product-mockup. Asset: one square full-bleed granite texture illustration for an architectural website materials card. Photorealistic close-up of dark charcoal grey granite, clearly visible randomly interlocking mineral grains: pale grey feldspar and quartz flecks with small black mica specks, medium-fine crystalline granular texture, very restrained natural variation. Granite must read as a granular igneous stone, not veined marble, concrete or glitter. Flat front-on surface, soft diffuse neutral daylight, honed-to-satin finish, no dramatic glare. Entire image filled by one uninterrupted granite surface; no edges, room, tools, labels, text, collage, borders, logos or watermark. Calm premium material study, square composition, sharp high-resolution detail, illustrative reference rather than a specific actual slab."
+    },
+    {
+      "key": "quartzite",
+      "source": "exec-276e8453-26e9-491b-ba1c-7be08299328d.png",
+      "prompt": "Use case: product-mockup. Asset: one square full-bleed material illustration for a premium architectural website. Photorealistic close-up of natural quartzite: ivory-beige and soft dove-grey mineral bands, subtly translucent interlocking sugary quartz crystals, gentle broad wavy metamorphic movement, restrained warm taupe streaks. Realistic granular crystalline microstructure, not ordinary marble with graphic black lines, not gold jewelry, not a kitchen. Front-on orthographic surface view, soft diffuse neutral daylight, polished satin finish without glaring highlights. Fill the entire image with one continuous stone surface; no slabs or edges, no room, no objects, no labels, text, logo, watermark, frame or collage. Square high-resolution texture study. An illustrative generic quartzite reference, not an identified commercial slab."
+    },
+    {
+      "key": "onyx",
+      "source": "exec-0933ff4b-d3d9-4994-8e46-44e4a9c5ac46.png",
+      "prompt": "Use case: product-mockup. Asset: single square full-bleed onyx material texture illustration for a premium architectural materials card. Photorealistic close-up of decorative calcitic architectural onyx, characteristic flowing gently irregular parallel bands of translucent honey amber, cream, caramel and pale ivory. Soft gentle subsurface glow from diffuse light through the stone, no artificial neon and no dramatic colored lighting. Physically believable natural banding and crystalline depth, not marble veins, not woodgrain. Entire square image is a flat front-on continuous stone surface. Crisp high resolution, no slab edge, room, decoration, text, labels, logos, watermark, borders or collage. Calm refined warm architectural palette. Generic illustrative reference, not an actual named supplied slab."
+    },
+    {
+      "key": "engineered-quartz",
+      "source": "exec-9e32b9fc-ad06-4678-8269-65e2189ed8ca.png",
+      "prompt": "Use case: product-mockup. Asset: one square full-bleed engineered quartz surface texture illustration, for a premium architectural website materials card. Photorealistic macro study of a manufactured warm off-white quartz composite countertop surface: very fine densely distributed pale mineral aggregate embedded in a uniform ivory matrix, subtle soft grey tiny flecks, calm evenly distributed microscopic grain. Smooth matte/satin finish. Distinctly uniform engineered quartz, no dramatic natural marble veins, no coarse black granite, no terrazzo chips and no glitter. Flat front-on surface with soft diffuse neutral daylight, no hard highlights. Fill the entire image with a single continuous surface. No edges, fixtures, objects, architecture, typography, labels, logo, watermark, border or collage. Square high-resolution material illustration, not a specific brand or a certified sample."
+    },
+    {
+      "key": "porcelain",
+      "source": "exec-83675842-7dfd-43ff-bbbc-fcb08f8146c4.png",
+      "prompt": "Use case: product-mockup. Asset: one square full-bleed porcelain stoneware surface texture illustration for a premium architectural website. A photorealistic close-up of a large-format matte porcelain surface in warm light greige limestone-effect finish: very fine dense ceramic microtexture, understated softly mottled mineral tonal variations, quiet pale warm-grey palette with almost imperceptible wisps. Manufactured large-format architectural porcelain, no large real geological crystals, no bold marble veins, no tile grout lines, no chips or damage. Flat front-on orthographic sample texture, diffuse studio daylight with no glare or shadow. Entire square image filled by the uninterrupted material surface. No edges, room, objects, text, labels, logos, watermark, border or collage. Crisp high-resolution illustrative study, not a specific commercial slab."
+    }
+  ]
+}
