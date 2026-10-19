@@ -17,7 +17,7 @@
  const uuid=()=>{if(typeof crypto.randomUUID==='function')return crypto.randomUUID();const b=crypto.getRandomValues(new Uint8Array(16));b[6]=(b[6]&15)|64;b[8]=(b[8]&63)|128;const h=[...b].map(x=>x.toString(16).padStart(2,'0')).join('');return [h.slice(0,8),h.slice(8,12),h.slice(12,16),h.slice(16,20),h.slice(20)].join('-');};
  let online=false,started=Date.now(),requestId=uuid();
  const category=cfg.landings?.[location.pathname];if(category)form.elements.product.value=category;
- fetch('/api/form-status',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(d=>{if(d?.enabled){online=true;fileInput.disabled=false;mode.textContent='Отправим вашу задачу и материалы в ROCCA для предварительного расчёта.';fileNote.textContent='PDF, DWG, DXF, JPG, PNG · до 5 файлов, всего до 3 МБ.';}}).catch(()=>{});
+ fetch('/api/form-status',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(d=>{if(d?.enabled){online=true;fileInput.disabled=false;const upload=fileInput.closest("[data-online-upload]");if(upload)upload.hidden=false;mode.textContent='Отправим вашу задачу и материалы в ROCCA для предварительного расчёта.';fileNote.textContent='PDF, DWG, DXF, JPG, PNG · до 5 файлов, всего до 3 МБ.';}}).catch(()=>{});
  form.addEventListener('input',()=>{draft.hidden=true;status.textContent='';requestId=uuid();});
  fileInput.addEventListener('change',()=>{const files=[...fileInput.files];if(files.length>5||files.reduce((n,f)=>n+f.size,0)>3*1024*1024){status.textContent='Выберите до 5 файлов общим размером до 3 МБ.';fileInput.value='';}else status.textContent=files.length?'Выбрано файлов: '+files.length+'. Они будут отправлены вместе с заявкой.':'';});
  form.addEventListener('submit',async e=>{
