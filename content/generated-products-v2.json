@@ -1,0 +1,18 @@
+{
+  "mode": "built-in image_gen",
+  "purpose": "Category illustrations for ROCCA Light; not photographs of completed ROCCA projects.",
+  "prompts": {
+    "bathroom": "Use case: photorealistic-natural. Asset type: ROCCA architectural website category image, bathroom. Create a calm high-end architectural interior photograph of a complete contemporary bathroom in a Saint Petersburg apartment, warm ivory natural stone vanity with a single precisely formed integrated basin, matte warm greige stone wall, simple wall-mounted brushed metal faucet aligned correctly over basin, large mirror with no reflections of people, softly lit shower zone in background. Main visual subject is stone vanity and its material. Wide horizontal composition 3:2 suitable for 4:3 crop, all critical fixtures centered with space at edges. Restrained warm oak accent, diffused natural daylight, tactile realistic textures, quiet premium editorial photography, no decorative clutter, no people, no text, no logo, no watermark. This is an illustrative design visualization, do not imply a documented real ROCCA project.",
+    "windowsill": "Use case: photorealistic-natural. Asset type: ROCCA architectural website category image, stone windowsill. Create a refined architectural interior photograph of one substantial natural stone windowsill inside a contemporary Saint Petersburg apartment. Main subject: a long 35cm deep pale ivory stone windowsill with subtle grey veining, clearly visible 30mm clean stone front edge and realistic wall returns, under a large tall dark bronze framed window. Three-quarter angle slightly above sill, entire sill visible, window frame accurately meets stone, view of soft out-of-focus historic Petersburg facades outside. A restrained oak chair partly visible below, pale plaster wall, one small ceramic cup only. Window sill must be unmistakable and occupy lower middle half of frame, not look like a desk or a kitchen counter. Landscape 3:2 composition, retain key stone edges under 4:3 crop. Soft northern daylight, realistic editorial architecture photograph. No people, no text, no logo or watermark. Illustrative design visualization, not documentation of an executed ROCCA project.",
+    "bespoke": "Use case: photorealistic-natural. Asset type: ROCCA architectural website category image, individual bespoke stone products. Create a quiet high-end architectural interior photograph centered on a bespoke sculptural stone console table: elongated oval light warm limestone top with gently rounded edges, two substantial cylindrical stone legs, subtle natural pores and tonal variations, physically coherent dimensions and construction. Full object visible in a calm modern apartment entrance hall, warm plaster background, oak floor, light from side window, one restrained dark ceramic bowl. The whole console is the unmistakable main subject, 3/4 frontal view, centered wide 3:2 composition with breathing room, suitable for 4:3 crop, no cropped legs. Refined contemporary architectural editorial photography with natural tactile surface, subtle imperfections, no glossy fake rendering look, no people, no lettering, no branding, no watermark. Illustrative design visualization, not documentation of an executed ROCCA project."
+  },
+  "sources": {
+    "bathroom": "exec-cc5083d9-6096-443e-ad34-312486f3a508.png",
+    "windowsill": "exec-db447912-e069-4cdd-b4bb-8d7fe36b63a4.png",
+    "bespoke": "exec-453c2fbb-a241-4c4f-af15-75877aa723f7.png"
+  },
+  "production": {
+    "source": "Existing user-supplied production archive",
+    "file": "assets/production/production-rocca-10-1100.webp"
+  }
+}
