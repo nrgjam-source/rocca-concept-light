@@ -101,7 +101,7 @@
  document.addEventListener('focusin',e=>{if(e.target.closest('form'))lenis?.start();});
 
  // Magnetic movement is bounded to six CSS pixels and never affects forms.
- document.querySelectorAll('[data-magnetic],.button,.nav-cta,.production-copy .text-link').forEach(button=>{
+ document.querySelectorAll('[data-magnetic],.button,.nav-cta,.production-copy .text-link,.hero .actions .text-link').forEach(button=>{
   let pending=false,last=null;
   button.addEventListener('pointermove',e=>{if(!desktop.matches||reduce.matches||e.pointerType!=='mouse')return;last=e;if(pending)return;pending=true;requestAnimationFrame(()=>{pending=false;if(!last)return;const r=button.getBoundingClientRect();const x=Math.max(-6,Math.min(6,(last.clientX-r.left-r.width/2)*.045));const y=Math.max(-6,Math.min(6,(last.clientY-r.top-r.height/2)*.1));button.style.setProperty('--magnet-x',x+'px');button.style.setProperty('--magnet-y',y+'px');});});
   button.addEventListener('pointerleave',()=>{last=null;button.style.removeProperty('--magnet-x');button.style.removeProperty('--magnet-y');});button.setAttribute('data-magnetic','');
