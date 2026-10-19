@@ -1,0 +1,11 @@
+{
+  "asset": "assets/products/fireplace-v1-1100.webp",
+  "type": "generated-brand-visual",
+  "usage": "Home product category: fireplaces",
+  "description": "Contemporary fireplace with warm grey stone surround. Brand illustration, not a completed project.",
+  "source": "generated_images/exec-360901d2-e706-45cd-adf5-98392582fccc.png",
+  "responsiveWidths": [
+    480,
+    1100
+  ]
+}
