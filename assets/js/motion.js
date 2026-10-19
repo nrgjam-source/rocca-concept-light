@@ -95,8 +95,8 @@
   const a=event.target.closest('a[href]');if(!a||event.defaultPrevented||event.button!==0||event.ctrlKey||event.metaKey||event.shiftKey||a.target||a.hasAttribute('download'))return;
   const url=new URL(a.href,location.href);if(url.origin!==location.origin||url.pathname!==location.pathname||!url.hash)return;
   let target;try{target=document.getElementById(decodeURIComponent(url.hash.slice(1)));}catch{return;}if(!target||!lenis)return;
-  event.preventDefault();history.pushState(null,'',url.hash);const offset=-(document.querySelector('header')?.offsetHeight||90)-18;
-  lenis.scrollTo(target,{offset,onComplete:()=>{const added=!target.hasAttribute('tabindex');if(added)target.tabIndex=-1;target.focus({preventScroll:true});if(added)target.addEventListener('blur',()=>target.removeAttribute('tabindex'),{once:true});}});
+  event.preventDefault();history.pushState(null,'',url.hash);const headerHeight=document.querySelector('header')?.offsetHeight||90;const chapterOffset=target.matches('[data-chapter]')&&innerWidth>700?(document.querySelector('.production-toc')?.offsetHeight||0):0;const destination=Math.max(0,target.getBoundingClientRect().top+scrollY-headerHeight-chapterOffset-18);
+  lenis.scrollTo(destination,{onComplete:()=>{const added=!target.hasAttribute('tabindex');if(added)target.tabIndex=-1;target.focus({preventScroll:true});if(added)target.addEventListener('blur',()=>target.removeAttribute('tabindex'),{once:true});}});
  });
  document.addEventListener('focusin',e=>{if(e.target.closest('form'))lenis?.start();});
 
