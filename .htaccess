@@ -4,10 +4,16 @@ DirectoryIndex index.html
 RewriteEngine On
 Options -MultiViews
 
-# Force the production canonical host and HTTPS.
-# Both http://roccastone.ru and http(s)://www.roccastone.ru -> https://roccastone.ru
-RewriteCond %{HTTPS} !=on [OR]
+# SpaceWeb terminates HTTPS at a proxy, so respect X-Forwarded-Proto.
+SetEnvIf X-Forwarded-Proto https HTTPS=on
+
+# Canonical host: www -> non-www.
 RewriteCond %{HTTP_HOST} ^www\.roccastone\.ru$ [NC]
+RewriteRule ^ https://roccastone.ru%{REQUEST_URI} [R=301,L,NE]
+
+# Force HTTPS without creating a proxy redirect loop.
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !https [NC]
 RewriteRule ^ https://roccastone.ru%{REQUEST_URI} [R=301,L,NE]
 
 # Canonical homepage.
