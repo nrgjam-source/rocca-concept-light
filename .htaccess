@@ -2,9 +2,13 @@ DirectoryIndex index.html
 
 <IfModule mod_rewrite.c>
 RewriteEngine On
-
-# Vercel-style clean URLs on Apache/SpaceWeb.
 Options -MultiViews
+
+# Force the production canonical host and HTTPS.
+# Both http://roccastone.ru and http(s)://www.roccastone.ru -> https://roccastone.ru
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\.roccastone\.ru$ [NC]
+RewriteRule ^ https://roccastone.ru%{REQUEST_URI} [R=301,L,NE]
 
 # Canonical homepage.
 RewriteCond %{THE_REQUEST} \s/+index\.html(?:[?\s]) [NC]
