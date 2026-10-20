@@ -6,7 +6,7 @@ Light is an independent full-cycle brand concept for private clients and, second
 Edit assets/js/private-config.js: active, endsAt (Moscow timezone), title, headline, description (bonus), terms and cta. The campaign hides automatically after endsAt and appears only in its standalone homepage section, never in the hero. The installed offer is photolayout plus sink installation with a countertop order through 31 October 2026. No percentage discounts or pricing are installed.
 
 ## Form
-/api/form-status enables online sending only when both RESEND_API_KEY and ROCCA_FORM_FROM exist. Add a restricted sending key in Vercel project rocca-concept-light and a verified sender/domain in Resend. Never put credentials in GitHub. Destination is fixed to hello@roccastone.ru.
+/api/form-status enables online sending only when both RESEND_API_KEY and ROCCA_FORM_FROM exist. Add a restricted sending key in Vercel project rocca-concept-light and a verified sender/domain in Resend. Never put credentials in GitHub. Destination is fixed to info@granit47spb.ru.
 
 Until configured, the visible form prepares a mailto draft and explicitly states that it is not sent; the file picker is disabled. Files must be added to the email. No success event is emitted for drafts.
 

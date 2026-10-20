@@ -10,7 +10,12 @@
  function configureScroll(){
   lenis?.destroy();lenis=null;
   if(!reduce.matches&&smoothDevice.matches&&typeof window.Lenis==='function'){
-   lenis=new Lenis({lerp:.14,smoothWheel:true,syncTouch:false,anchors:false,prevent:node=>!!node.closest('[data-lenis-prevent],form,#navigation.open,textarea,select')});
+   lenis=new Lenis({
+    lerp:.14,smoothWheel:true,syncTouch:false,anchors:false,
+    // Horizontal rail gestures stay native; vertical wheel gestures scroll the page.
+    virtualScroll:({event,deltaX,deltaY})=>!(event.target instanceof Element&&event.target.closest('[data-gallery-rail]')&&(event.shiftKey||Math.abs(deltaX)>Math.abs(deltaY))),
+    prevent:node=>!!node.closest('[data-lenis-prevent],form,#navigation.open,textarea,select')
+   });
   }
   root.classList.toggle('rocca-smooth-scroll',!!lenis);
  }

@@ -1,0 +1,12 @@
+/* Shared Light contact actions; existing ROCCA logo artwork is unchanged. */
+.rocca-light header{gap:clamp(12px,1.4vw,24px)}
+.rocca-light .header-call{display:inline-flex;align-items:center;justify-content:center;gap:12px;flex-shrink:0;margin-inline:auto;min-height:42px;padding:10px 15px;border:1px solid var(--line);font-size:11px;line-height:1.2;letter-spacing:.025em;text-transform:uppercase;white-space:nowrap;transition:border-color .25s,color .25s}
+.rocca-light .header-call svg{display:block;width:18px;height:18px;flex-shrink:0}
+.rocca-light .header-call:hover{border-color:var(--ink)}
+.rocca-light .roles a[href^="tel:"]{display:inline-flex;align-items:center;min-height:36px;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px;text-decoration-color:var(--line);color:var(--ink)}
+.rocca-light .roles a[href^="tel:"]:hover{text-decoration-color:currentColor}
+@media(max-width:1150px){.rocca-light .header-call{margin-left:auto;margin-right:0}}
+@media(max-width:700px){
+ .rocca-light .header-call{width:42px;height:42px;padding:10px}
+ .rocca-light .header-call-label{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+}

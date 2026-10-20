@@ -23,6 +23,6 @@ const form=document.querySelector('#project-form');const draft=document.querySel
 if(form&&draft){
  document.querySelectorAll('[data-inquiry]').forEach(link=>link.addEventListener('click',()=>{const kind=link.dataset.inquiry;if(!form.elements.task.value&&kind!=='project')form.elements.task.value=kind==='material'?'Нужен подбор материала. ':kind==='professional'?'Оценка профессионального проекта. ':kind+': ';draft.hidden=true;}));
  form.addEventListener('input',()=>{draft.hidden=true;document.querySelector('#form-status').textContent='';});
- form.addEventListener('submit',e=>{e.preventDefault();if(!form.reportValidity())return;const body=['Имя: '+form.elements.name.value,'Контакт: '+form.elements.contact.value,'Задача: '+form.elements.task.value].join('\n\n');draft.href='mailto:hello@roccastone.ru?subject='+encodeURIComponent('ROCCA — расчёт проекта')+'&body='+encodeURIComponent(body);draft.hidden=false;document.querySelector('#form-status').textContent='Письмо подготовлено. Откройте его, приложите материалы и отправьте.';draft.focus();});
+ form.addEventListener('submit',e=>{e.preventDefault();if(!form.reportValidity())return;const body=['Имя: '+form.elements.name.value,'Контакт: '+form.elements.contact.value,'Задача: '+form.elements.task.value].join('\n\n');draft.href='mailto:info@granit47spb.ru?subject='+encodeURIComponent('ROCCA — расчёт проекта')+'&body='+encodeURIComponent(body);draft.hidden=false;document.querySelector('#form-status').textContent='Письмо подготовлено. Откройте его, приложите материалы и отправьте.';draft.focus();});
 }
 
